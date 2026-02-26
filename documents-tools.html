@@ -17,6 +17,7 @@
       <a href="apply-posts.html">Apply Posts</a>
       <a href="academics.html">Academics</a>
       <a href="documents-tools.html">Documents</a>
+
     </nav>
   </header>
 
@@ -32,38 +33,97 @@
     <!-- Photo Resize -->
     <div class="tool-card">
       <h3>📷 Photo Resize (JKSSB)</h3>
-      <p>Resize your passport-size photo as per JKSSB guidelines.</p>
-      <input type="file" disabled>
-      <button disabled>Resize Photo</button>
-      <span class="badge">UI Ready</span>
+      <p>Resize your photo as per JKSSB requirements.</p>
+    
+      <input type="file" id="photoInput" accept="image/*">
+      <button onclick="resizePhoto(this)">Resize Photo</button>
+    
+      <canvas id="canvas" style="display:none;"></canvas>
+    
+      <a id="downloadLink" style="display:none;" download="jkssb-photo.jpg">
+        Download JKSSB Ready Photo
+      </a>
+    
+      <span class="badge">Working</span>
     </div>
 
     <!-- Signature Resize -->
+    
     <div class="tool-card">
-      <h3>✍️ Signature Resize</h3>
-      <p>Upload signature on white background and resize correctly.</p>
-      <input type="file" disabled>
-      <button disabled>Resize Signature</button>
-      <span class="badge">UI Ready</span>
+      <h3>✍️ Signature Resize (JKSSB)</h3>
+      <p>Upload signature on white background.</p>
+    
+      <input type="file" id="signInput" accept="image/*">
+      <button onclick="resizeSignature(this)">Resize Signature</button>
+    
+      <canvas id="signCanvas" style="display:none;"></canvas>
+    
+      <a id="signDownload" style="display:none;" download="jkssb-signature.jpg">
+        Download JKSSB Ready Signature
+      </a>
+    
+      <span class="badge">Working</span>
     </div>
 
     <!-- Image to PDF -->
-    <div class="tool-card">
-      <h3>🖼️ Image to PDF</h3>
-      <p>Convert certificate images into a single PDF file.</p>
-      <input type="file" multiple disabled>
-      <button disabled>Convert to PDF</button>
-      <span class="badge">UI Ready</span>
-    </div>
+    
+    <!-- Image to PDF Tool -->
+<div class="tool-card">
+  <h3>🖼️ Image to PDF (JKSSB)</h3>
+  <p>Select one or more images to create a single PDF.</p>
+
+  <input type="file" id="pdfImages" accept="image/*" multiple>
+  <button onclick="convertToPDF(this)">Convert to PDF</button>
+
+  <a id="pdfDownload" style="display:none;" download="jkssb-documents.pdf">
+    Download JKSSB Ready PDF
+  </a>
+
+  <span class="badge">Working</span>
+</div>
 
     <!-- PDF Size Check -->
-    <div class="tool-card">
-      <h3>📄 PDF Size Check</h3>
-      <p>Check and compress PDF to required size.</p>
-      <input type="file" disabled>
-      <button disabled>Check PDF</button>
-      <span class="badge">UI Ready</span>
-    </div>
+   <!-- Exact PDF Size Tool -->
+<div class="tool-card">
+  <h3>📄 Exact PDF Size (JKSSB)</h3>
+  <p>Automatically adjust PDF size between <b>20 KB – 100 KB</b>.</p>
+
+  <input type="file" id="pdfExactInput" accept="application/pdf">
+  <button onclick="makeExactPDF(this)">Make JKSSB PDF</button>
+
+  <p id="pdfSizeInfo" style="font-size:13px; margin-top:10px;"></p>
+
+  <a id="pdfExactDownload" style="display:none;" download="jkssb-exact.pdf">
+    Download JKSSB Ready PDF
+  </a>
+
+  <span class="badge">Smart</span>
+</div>
+
+<!-- Lock PDF to 50 KB -->
+<div class="tool-card">
+  <h3>📄 Lock PDF Size (50 KB)</h3>
+  <p>Automatically adjust PDF to exactly <b>50 KB (±1 KB)</b>.</p>
+
+  <input type="file" id="pdfLockInput" accept="application/pdf">
+
+  <button onclick="lockPdfTo50(this)">Make 50 KB PDF</button>
+
+  <p id="pdfLockInfo" style="font-size:13px; margin-top:10px;"></p>
+
+  <a id="pdfLockDownload"
+     style="display:none;"
+     download="jkssb-50kb.pdf">
+     Download 50 KB PDF
+  </a>
+
+  <span class="badge">Smart</span>
+</div>
+
+<!-- PDF Preview -->
+<div id="pdfPreview"
+     style="display:none; margin-top:15px; gap:10px; flex-wrap:wrap;">
+</div>
 
   </section>
 
@@ -73,14 +133,28 @@
       🔒 These tools do not upload your files to any server.
       Processing will be done securely in your browser (coming soon).
     </div>
+
+<!-- Global Loader -->
+<div id="loader" class="loader-overlay" style="display:none;">
+  <div class="spinner"></div>
+  <p>Processing… please wait</p>
+</div>
+    
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>
+    <p style="font-size:13px; color:#555;">
       This website is for guidance only and is not affiliated with JKSSB.
+      No files are uploaded or stored on any server.
     </p>
   </footer>
+
+
+  <!-- PDF.js (to read PDFs) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
