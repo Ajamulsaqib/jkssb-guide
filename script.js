@@ -408,3 +408,101 @@ if (sizeKB > 100) {
     }
   }
 
+// ===============================
+// ACADEMICS ACCORDION SCRIPT
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const headers = document.querySelectorAll(".accordion-header");
+
+  headers.forEach(function (header) {
+    header.addEventListener("click", function () {
+
+      const currentItem = this.parentElement;
+
+      // Close all other accordion items
+      document.querySelectorAll(".accordion-item").forEach(function (item) {
+        if (item !== currentItem) {
+          item.classList.remove("active");
+        }
+      });
+
+      // Toggle current accordion item
+      currentItem.classList.toggle("active");
+    });
+  });
+
+});
+
+
+
+
+
+// =====================================
+// FEATURE CARD NAVIGATION + ACCORDION
+// =====================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* -------------------------------
+     FEATURE CARD CLICK HANDLERS
+     ------------------------------- */
+
+  // Map card titles (or data attributes) to pages
+  const cardRoutes = {
+    "Live Photo Help": "live-photo.html",
+    "Documents": "documents.html",
+    "Academics": "academics.html",
+    "Create Account": "create-account.html",
+    "Apply Posts": "apply-posts.html",
+    "Preference": "preference.html"
+  };
+
+  // Select all feature cards
+  const featureCards = document.querySelectorAll(".feature-card");
+
+  featureCards.forEach(function (card) {
+    card.addEventListener("click", function () {
+      const titleEl = card.querySelector("h3");
+      if (!titleEl) return;
+
+      const titleText = titleEl.innerText.trim();
+      const targetPage = cardRoutes[titleText];
+
+      if (targetPage) {
+        window.location.href = targetPage;
+      }
+    });
+
+    // Optional: make it keyboard accessible
+    card.setAttribute("tabindex", "0");
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        card.click();
+      }
+    });
+  });
+
+  /* -------------------------------
+     ACCORDION SCRIPT (ALL PAGES)
+     ------------------------------- */
+
+  const headers = document.querySelectorAll(".accordion-header");
+
+  headers.forEach(function (header) {
+    header.addEventListener("click", function () {
+
+      const currentItem = this.closest(".accordion-item");
+
+      document.querySelectorAll(".accordion-item").forEach(function (item) {
+        if (item !== currentItem) {
+          item.classList.remove("active");
+        }
+      });
+
+      currentItem.classList.toggle("active");
+    });
+  });
+
+});

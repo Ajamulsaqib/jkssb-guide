@@ -6,7 +6,7 @@
   }
   
   body {
-    background: #f4f6f9;
+    background: hsl(216, 29%, 97%);
     color: #2c3e50;
   }
   
@@ -45,19 +45,46 @@
     text-decoration: none;
   }
   
-  /* Features */
-  .features {
-    padding: 50px;
+    .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
   }
   
   .feature-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .feature-card h3 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 18px;
+  }
+  
+  /* Button inside card */
+  .card-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #1e88e5;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .card-btn:hover {
+    background-color: #1565c0;
   }
   
   /* Footer */
@@ -68,6 +95,23 @@
     padding: 12px;
     font-size: 13px;
   }
+
+  /* .footer {
+    text-align: center;
+    padding: 20px;
+    background: #f5f7fa;
+    font-size: 14px;
+  } */
+  
+  .footer a {
+    color: #1E90FF;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
 
 
   .page-title {
@@ -253,6 +297,122 @@
   }
 }
 
+/* =====================================
+   ACADEMICS ACCORDION – JKSSB GUIDE
+   ===================================== */
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0d47a1;
+  margin: 25px 0 35px;
+}
+
+/* Container */
+.accordion-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 15px 40px;
+}
+
+/* Each Accordion Item */
+.accordion-item {
+  background: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #1e88e5;
+}
+
+/* Header Button */
+.accordion-header {
+  width: 100%;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrow Icon */
+.accordion-header::after {
+  content: "▾";
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when active */
+.accordion-item.active .accordion-header::after {
+  transform: rotate(180deg);
+}
+
+/* Hover */
+.accordion-header:hover {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+}
+
+/* Content Body */
+.accordion-body {
+  display: none;
+  padding: 18px 20px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.7;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Show Content */
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+/* Paragraph spacing */
+.accordion-body p {
+  margin-bottom: 10px;
+}
+
+/* Highlight important text */
+/* .accordion-body strong {
+  color: #c62828;
+} */
+
+/* Important Instruction Box */
+/* .accordion-item:last-child {
+  border-left-color: #d32f2f;
+} */
+
+/* .accordion-item:last-child .accordion-header {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+} */
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 22px;
+  }
+
+  .accordion-header {
+    font-size: 15px;
+    padding: 14px 15px;
+  }
+
+  .accordion-body {
+    font-size: 14px;
+    padding: 14px 15px;
+  }
+}
+
 
 /* =========================
    MOBILE VISIBILITY FIX
@@ -353,7 +513,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  /* background: #25D366;
   color: #fff;
   width: 55px;
   height: 55px;
@@ -363,7 +523,7 @@
   font-size: 26px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 9999;
-  text-decoration: none;
+  text-decoration: none; */
 }
 
 .whatsapp-float:hover {
@@ -375,5 +535,150 @@
   .whatsapp-float {
     bottom: 15px;
     right: 15px;
+  }
+}
+
+
+/* ================= ACCORDION STYLES ================= */
+
+.accordion-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.accordion-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0d47a1;
+}
+
+.accordion-item {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.accordion-header {
+  width: 100%;
+  background: #1e88e5;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-header:hover {
+  background: #1565c0;
+}
+
+.accordion-body {
+  display: none;
+  padding: 15px;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+.accordion-body {
+  display: none;
+}
+
+.accordion-item.active .accordion-body {
+  display: block;
+}
+
+/* ===================================================== */
+
+
+
+
+/* ===============================
+   DEVELOPER TAB – TEXT ONLY
+   =============================== */
+
+/* Content box */
+.content {
+  max-width: 850px;
+  margin: 30px auto;
+  background:#eef4fa;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Developer name */
+.content h3 {
+  font-size: 24px;
+  color: #0d47a1;
+  margin-bottom: 12px;
+}
+
+/* Sub-headings like Contact */
+.content h4 {
+  font-size: 18px;
+  color: #1565c0;
+  margin-top: 26px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph text */
+.content p {
+  font-size: 15.5px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* Bullet list */
+.content ul {
+  margin: 15px 0 20px 22px;
+}
+
+.content ul li {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Highlight important text */
+.content strong {
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+/* Links (email / WhatsApp) */
+.content a {
+  color: #1e88e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.content a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile text adjustment */
+@media (max-width: 600px) {
+  .content {
+    padding: 22px;
+    margin: 20px 12px;
+  }
+
+  .content h3 {
+    font-size: 20px;
+  }
+
+  .content p,
+  .content ul li {
+    font-size: 14.5px;
   }
 }

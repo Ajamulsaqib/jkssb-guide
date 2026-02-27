@@ -9,6 +9,7 @@
 <body>
 
   <!-- Header -->
+   
   <header class="header">
     <h1>JKSSB Guide & Tools</h1>
     <nav>
@@ -16,65 +17,222 @@
       <a href="create-account.html">Create Account</a>
       <a href="apply-posts.html">Apply Posts</a>
       <a href="academics.html">Academics</a>
-      <a href="documents-tools.html">Documents</a>
+      <a href="documents-tools.html">PDF & Photo</a>
+      <a href="post-preference.html">Preference</a>
+      <a href="live-photo.html">Live-Photo</a>
       <a href="about-developer.html">About</a>
+
+    
     </nav>
   </header>
 
   <!-- Page Title -->
-  <section class="page-title">
-    <h2>How to Create JKSSB Account</h2>
-    <p>Step-by-step guide for new candidates</p>
+  <section class="accordion-container">
+
+    <h2 class="page-title">Create JKSSB Account – Step by Step Guide</h2>
+  
+    <!-- Step 1 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 1: Candidate Name
+      </button>
+      <div class="accordion-body">
+        <p>
+          Enter your name exactly as written in your Matric (10th) certificate.
+        </p>
+        <p>
+          Do not use titles like Shri, Mr, Ms, Dr, or extra spaces.
+        </p>
+        <p>
+          Any mismatch in name can cause rejection during document verification.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 2 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 2: Father’s Name
+      </button>
+      <div class="accordion-body">
+        <p>
+          Enter your father’s name exactly as mentioned in your Matric certificate.
+        </p>
+        <p>
+          Do not add words like Late, Shri, or initials.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 3 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 3: Date of Birth
+      </button>
+      <div class="accordion-body">
+        <p>
+          Select your Date of Birth carefully.
+        </p>
+        <p>
+          Date of Birth must match your Matric certificate or School Leaving Certificate.
+        </p>
+        <p>
+          Date of Birth cannot be changed later.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 4 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 4: Gender & Marital Status
+      </button>
+      <div class="accordion-body">
+        <p>
+          Select your gender as mentioned in official records.
+        </p>
+        <p>
+          Choose marital status correctly. Wrong selection may affect eligibility
+          for some posts.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 5 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 5: Email ID
+      </button>
+      <div class="accordion-body">
+        <p>
+          Enter a valid and active email ID.
+        </p>
+        <p>
+          Account activation link and password recovery details are sent to this email.
+        </p>
+        <p>
+          Check spam folder if activation mail is not received.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 6 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 6: Mobile Number
+      </button>
+      <div class="accordion-body">
+        <p>
+          Enter your 10-digit mobile number.
+        </p>
+        <p>
+          Do not add +91 or 0 before the number.
+        </p>
+        <p>
+          OTP and important updates are sent to this number.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 7 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 7: Category & Domicile
+      </button>
+      <div class="accordion-body">
+        <p>
+          Select your category carefully (OM, SC, ST, OBC, RBA, etc.).
+        </p>
+        <p>
+          If you select domicile as Yes, you must upload a valid domicile certificate
+          during application.
+        </p>
+        <p>
+          Wrong category selection may lead to rejection.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 8 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 8: Username & Password
+      </button>
+      <div class="accordion-body">
+        <p>
+          Create a strong password as per instructions shown on the screen.
+        </p>
+        <p>
+          Password should be remembered safely for future logins.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 9 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 9: Captcha Verification
+      </button>
+      <div class="accordion-body">
+        <p>
+          Enter captcha exactly as displayed.
+        </p>
+        <p>
+          If captcha is unclear, refresh it before entering.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 10 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 10: Submit & Account Activation
+      </button>
+      <div class="accordion-body">
+        <p>
+          Recheck all entered details before clicking Submit.
+        </p>
+        <p>
+          After submission, check your email for account activation link.
+        </p>
+        <p>
+          Without activating the account, you cannot apply for any post.
+        </p>
+      </div>
+    </div>
+  
   </section>
 
-  <!-- Content -->
-  <section class="content">
+  <script>
+    // ===============================
+    // CREATE ACCOUNT ACCORDION SCRIPT
+    // ===============================
+  
+    document.addEventListener("DOMContentLoaded", function () {
+  
+      var headers = document.querySelectorAll(".accordion-header");
+  
+      headers.forEach(function (header) {
+        header.addEventListener("click", function () {
+  
+          var currentItem = this.parentElement;
+  
+          // Close other open accordions
+          document.querySelectorAll(".accordion-item").forEach(function (item) {
+            if (item !== currentItem) {
+              item.classList.remove("active");
+            }
+          });
+  
+          // Toggle current accordion
+          currentItem.classList.toggle("active");
+        });
+      });
+  
+    });
+  </script>
 
-    <h3>Step 1: Visit Official Website</h3>
-    <p>
-      Go to the official website of 
-      <strong>:contentReference[oaicite:0]{index=0}</strong>
-      and click on <b>New Registration</b>.
-    </p>
-
-    <h3>Step 2: Fill Basic Details</h3>
-    <ul>
-      <li>Full Name (as per 10th marksheet)</li>
-      <li>Date of Birth</li>
-      <li>Mobile Number</li>
-      <li>Email ID</li>
-    </ul>
-
-    <p class="note">
-      ⚠️ Do not use nickname or short name.
-    </p>
-
-    <h3>Step 3: Verify Mobile & Email</h3>
-    <p>
-      An OTP will be sent to your registered mobile number and email ID.
-      Enter OTP carefully.
-    </p>
-
-    <h3>Step 4: Set Password</h3>
-    <ul>
-      <li>Password should contain letters, numbers & symbols</li>
-      <li>Do not share your password with anyone</li>
-    </ul>
-
-    <h3>Step 5: Login Successfully</h3>
-    <p>
-      After successful registration, login using your credentials.
-    </p>
-
-    <h3>Common Mistakes to Avoid</h3>
-    <ul>
-      <li>Creating multiple accounts</li>
-      <li>Wrong date of birth</li>
-      <li>Using another person’s mobile number</li>
-      <li>Mismatch in name and certificates</li>
-    </ul>
-
-  </section>
+<!-- ======================================================== -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -82,11 +240,11 @@
       Developed & Maintained by <strong>Ajamul Saqib</strong>
     </p>
 
-    <p style="font-size:13px; color:#555;">
+    <p>
       This website is for guidance only and is not affiliated with JKSSB.
       No files are uploaded or stored on any server.
     </p>
   </footer>
-
+ 
 </body>
 </html>

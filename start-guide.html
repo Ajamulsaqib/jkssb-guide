@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>JKSSB Guide & Tools</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="create-account.html">Create Account</a>
+          <a href="apply-posts.html">Apply Posts</a>
+          <a href="academics.html">Academics</a>
+          <a href="documents-tools.html">PDF & Photo</a>
+          <a href="post-preference.html">Preference</a>
+          <a href="live-photo.html">Live-Photo</a>
+          <a href="about-developer.html">About</a>
+    
+        </nav>
+    </header>
+<section class="accordion-container">
+
+    <h2 class="page-title">How to Use This JKSSB Help Portal</h2>
+  
+    <!-- Step 1 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 1: What Is This Website?
+      </button>
+      <div class="accordion-body">
+        <p>
+          This website is created to help JKSSB aspirants understand
+          the online application process step by step.
+        </p>
+        <p>
+          It does not replace the official JKSSB website.
+          It only guides you to avoid mistakes.
+        </p>
+        <p>
+          No personal data is collected or stored here.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 2 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 2: How to Start Using This Website
+      </button>
+      <div class="accordion-body">
+        <p>
+          Start from the home page where you see different cards like
+          Create Account, Academics, Documents, Live Photo Help, etc.
+        </p>
+        <p>
+          Click on any card to open its detailed step-by-step guide.
+        </p>
+        <p>
+          Read each step carefully before applying on JKSSB portal.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 3 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 3: What Happens When You Click "Create Account"
+      </button>
+      <div class="accordion-body">
+        <p>
+          This page explains how to create a JKSSB account correctly.
+        </p>
+        <p>
+          You will learn how to fill name, father’s name, date of birth,
+          email, mobile number, category, and captcha.
+        </p>
+        <p>
+          It also explains common mistakes that lead to rejection.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 4 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 4: What Happens When You Click "Academics"
+      </button>
+      <div class="accordion-body">
+        <p>
+          This section explains how to fill academic details from
+          8th class to PhD.
+        </p>
+        <p>
+          It clearly separates academic and professional qualifications.
+        </p>
+        <p>
+          It tells you which qualification to fill and which to skip.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 5 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 5: What Happens When You Click "Documents"
+      </button>
+      <div class="accordion-body">
+        <p>
+          This page explains which documents to upload and where.
+        </p>
+        <p>
+          You will learn about PDF format, file size limits,
+          and common upload errors.
+        </p>
+        <p>
+          It also explains the declaration checkbox.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 6 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 6: What Happens When You Click "Live Photo Help"
+      </button>
+      <div class="accordion-body">
+        <p>
+          This section helps you solve live photo capture problems.
+        </p>
+        <p>
+          It explains mirror image issue, blur error,
+          camera permission problems, and lighting tips.
+        </p>
+        <p>
+          It is especially useful for mobile users.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 7 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 7: What Happens When You Click "Apply for Posts"
+      </button>
+      <div class="accordion-body">
+        <p>
+          This page explains how to apply for JKSSB posts after login.
+        </p>
+        <p>
+          It covers active advertisements, eligibility check,
+          fee payment, preview, and final submission.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 8 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 8: What Happens When You Click "Post Preference"
+      </button>
+      <div class="accordion-body">
+        <p>
+          This page explains how to select post preference correctly.
+        </p>
+        <p>
+          You will understand how merit and preference work together.
+        </p>
+        <p>
+          It helps you avoid wrong preference order.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 9 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 9: Important Things to Remember
+      </button>
+      <div class="accordion-body">
+        <p>
+          Always verify information with official JKSSB notifications.
+        </p>
+        <p>
+          Keep original documents ready for document verification.
+        </p>
+        <p>
+          This website is for guidance only.
+        </p>
+      </div>
+    </div>
+  
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  
+      var headers = document.querySelectorAll(".accordion-header");
+  
+      headers.forEach(function (header) {
+        header.addEventListener("click", function () {
+  
+          var currentItem = this.parentElement;
+  
+          document.querySelectorAll(".accordion-item").forEach(function (item) {
+            if (item !== currentItem) {
+              item.classList.remove("active");
+            }
+          });
+  
+          currentItem.classList.toggle("active");
+        });
+      });
+  
+    });
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      Developed & Maintained by <strong>Ajamul Saqib</strong>
+    </p>
+    <p>
+      This website is for guidance only and is not affiliated with JKSSB.
+    </p>
+  </footer>
+
+
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Developer – JKSSB Guide & Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header class="header">
+  <h1>JKSSB Guide & Tools</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="create-account.html">Create Account</a>
+    <a href="apply-posts.html">Apply Posts</a>
+    <a href="academics.html">Academics</a>
+    <a href="documents-tools.html">PDF & Photo</a>
+    <a href="post-preference.html">Preference</a>
+    <a href="live-photo.html">Live-Photo</a>
+    <a href="about-developer.html">About</a>
+    
+  </nav>
+</header>
+
+<section class="accordion-container">
+
+    <h2 class="page-title">JKSSB Live Photo Capture – Step by Step Guide</h2>
+  
+    <!-- Step 1 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 1: Camera Permission
+      </button>
+      <div class="accordion-body">
+        <p>
+          When prompted, allow camera access in your browser.
+        </p>
+        <p>
+          If permission is denied, live photo will not work.
+        </p>
+        <p>
+          Use Google Chrome for best results.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 2 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 2: Choose Correct Camera
+      </button>
+      <div class="accordion-body">
+        <p>
+          If multiple cameras are available, select the correct one.
+        </p>
+        <p>
+          Rear camera is recommended for clearer image.
+        </p>
+        <p>
+          Front camera may show mirror preview.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 3 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 3: Mirror Image Issue
+      </button>
+      <div class="accordion-body">
+        <p>
+          Sometimes the preview appears mirrored.
+        </p>
+        <p>
+          Do not worry if face looks reversed in preview.
+        </p>
+        <p>
+          Keep your face straight and centered.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 4 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 4: Lighting & Background
+      </button>
+      <div class="accordion-body">
+        <p>
+          Sit in a well-lit area with light facing your face.
+        </p>
+        <p>
+          Use a plain, light-colored background.
+        </p>
+        <p>
+          Avoid shadows on face.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 5 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 5: Blur / “Hold Phone Steady” Error
+      </button>
+      <div class="accordion-body">
+        <p>
+          This error occurs due to hand movement or low light.
+        </p>
+        <p>
+          Place phone on a stable surface if possible.
+        </p>
+        <p>
+          Wait 2–3 seconds before capture.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 6 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 6: Face Verification Failed
+      </button>
+      <div class="accordion-body">
+        <p>
+          Uploaded photo and live photo must match.
+        </p>
+        <p>
+          Avoid spectacles, caps, masks during capture.
+        </p>
+        <p>
+          Use a recent uploaded photograph.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 7 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 7: Common Technical Errors
+      </button>
+      <div class="accordion-body">
+        <p>
+          Camera not opening: refresh page and re-allow permission.
+        </p>
+        <p>
+          Black screen: close other apps using camera.
+        </p>
+        <p>
+          Error on mobile: try laptop or desktop if available.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Step 8 -->
+    <div class="accordion-item">
+      <button class="accordion-header">
+        Step 8: Final Tips (Very Important)
+      </button>
+      <div class="accordion-body">
+        <p>
+          Do not use filters or beauty mode.
+        </p>
+        <p>
+          Keep neutral expression.
+        </p>
+        <p>
+          Follow on-screen instructions carefully.
+        </p>
+      </div>
+    </div>
+  
+  </section>
+  <script>
+    // ===============================
+    // LIVE PHOTO ACCORDION SCRIPT
+    // ===============================
+  
+    document.addEventListener("DOMContentLoaded", function () {
+  
+      var headers = document.querySelectorAll(".accordion-header");
+  
+      headers.forEach(function (header) {
+        header.addEventListener("click", function () {
+  
+          var currentItem = this.parentElement;
+  
+          // Close other open accordions
+          document.querySelectorAll(".accordion-item").forEach(function (item) {
+            if (item !== currentItem) {
+              item.classList.remove("active");
+            }
+          });
+  
+          // Toggle current accordion
+          currentItem.classList.toggle("active");
+        });
+      });
+  
+    });
+  </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+          Developed & Maintained by <strong>Ajamul Saqib</strong>
+        </p>
+        <p>
+          This website is for guidance only and is not affiliated with JKSSB.
+        </p>
+      </footer>
+    
+    </body>
+    </html>
