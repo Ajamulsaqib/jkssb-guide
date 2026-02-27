@@ -1,0 +1,23 @@
+{
+    "name": "JKSSB Guide & Tools",
+    "short_name": "JKSSB Guide",
+    "description": "A step-by-step guidance platform for JKSSB online applications",
+    "start_url": "index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#0d47a1",
+    "theme_color": "#0d47a1",
+    "icons": [
+      {
+        "src": "icons/icon-192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
